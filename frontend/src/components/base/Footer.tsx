@@ -1,22 +1,26 @@
-import React from 'react'
+import React from 'react';
 
 function Footer() {
   return (
     <footer
-      className="bg-light text-center text-lg-start"
-      style={{ marginTop: 200 }}
+      className="text-center text-lg-start"
+      style={{
+        marginTop: '200px',
+        backgroundColor: '#1E90FF', // Signature blue
+        color: '#FFFFFF', // White text for contrast
+      }}
     >
       {/* Grid container */}
       <div className="container p-4">
         <div className="row">
           <div className="col-md-6 mb-4 mb-md-0 d-flex justify-content-center justify-content-md-start align-items-center">
-            <strong>Get connected with us on social networks</strong>
+            <strong style={{ fontSize: '1.2rem' }}>Get connected with us on social networks</strong>
           </div>
           <div className="col-md-6 d-flex justify-content-center justify-content-md-end">
             {/* Facebook */}
             <a
-              className="btn btn-primary btn-sm btn-floating me-2"
-              style={{ backgroundColor: '#3b5998' }}
+              className="btn btn-sm btn-floating me-2"
+              style={{ backgroundColor: '#3b5998', color: '#FFFFFF' }}
               href="#!"
               role="button"
             >
@@ -24,8 +28,8 @@ function Footer() {
             </a>
             {/* Twitter */}
             <a
-              className="btn text-white btn-sm btn-floating me-2"
-              style={{ backgroundColor: '#55acee' }}
+              className="btn btn-sm btn-floating me-2"
+              style={{ backgroundColor: '#55acee', color: '#FFFFFF' }}
               href="#!"
               role="button"
             >
@@ -33,8 +37,8 @@ function Footer() {
             </a>
             {/* Pinterest */}
             <a
-              className="btn text-white btn-sm btn-floating me-2"
-              style={{ backgroundColor: '#c61118' }}
+              className="btn btn-sm btn-floating me-2"
+              style={{ backgroundColor: '#c61118', color: '#FFFFFF' }}
               href="#!"
               role="button"
             >
@@ -42,8 +46,8 @@ function Footer() {
             </a>
             {/* Youtube */}
             <a
-              className="btn text-white btn-sm btn-floating me-2"
-              style={{ backgroundColor: '#ed302f' }}
+              className="btn btn-sm btn-floating me-2"
+              style={{ backgroundColor: '#ed302f', color: '#FFFFFF' }}
               href="#!"
               role="button"
             >
@@ -51,8 +55,8 @@ function Footer() {
             </a>
             {/* Instagram */}
             <a
-              className="btn text-white btn-sm btn-floating me-2"
-              style={{ backgroundColor: '#ac2bac' }}
+              className="btn btn-sm btn-floating me-2"
+              style={{ backgroundColor: '#ac2bac', color: '#FFFFFF' }}
               href="#!"
               role="button"
             >
@@ -60,42 +64,38 @@ function Footer() {
             </a>
           </div>
         </div>
-        <hr className="my-3" />
+        <hr className="my-3" style={{ borderColor: '#FFFFFF' }} />
         <div className="row">
           <div className="col-lg-4 mb-4 mb-lg-0">
             <p>
-              <strong>About us</strong>
+              <strong style={{ fontSize: '1.2rem' }}>About us</strong>
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-              atque ea quis molestias. Fugiat pariatur maxime quis culpa
-              corporis vitae repudiandae aliquam voluptatem veniam, est atque
-              cumque eum delectus sint!
+            <p style={{ fontSize: '0.9rem' }}>
+              Welcome to ShopIN, your ultimate destination for a wide range of high-quality products! From everyday essentials to unique finds, we’ve got something for everyone. Our mission is to make your shopping experience seamless, affordable, and enjoyable. With a curated selection and a customer-first approach, we’re here to meet all your needs. Thank you for choosing ShopIN—where variety meets convenience!
             </p>
           </div>
           <div className="col-lg-3 mb-4 mb-lg-0">
             <p>
-              <strong>Useful links</strong>
+              <strong style={{ fontSize: '1.2rem' }}>Useful links</strong>
             </p>
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Privacy policy
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Media
                 </a>
               </li>
-              {/* recomece aqui */}
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Job offers
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Cooperation
                 </a>
               </li>
@@ -103,26 +103,26 @@ function Footer() {
           </div>
           <div className="col-lg-3 mb-4 mb-lg-0">
             <p>
-              <strong>Products</strong>
+              <strong style={{ fontSize: '1.2rem' }}>Products</strong>
             </p>
             <ul className="list-unstyled">
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Electronics
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Fashion
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Beauty
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Automotive
                 </a>
               </li>
@@ -130,26 +130,26 @@ function Footer() {
           </div>
           <div className="col-lg-2 mb-4 mb-lg-0">
             <p>
-              <strong>Support</strong>
+              <strong style={{ fontSize: '1.2rem' }}>Support</strong>
             </p>
             <ul className="list-unstyled">
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Complaints
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Help center
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   Community
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-dark">
+                <a href="#!" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
                   FAQ
                 </a>
               </li>
@@ -159,16 +159,16 @@ function Footer() {
       </div>
       <div
         className="text-center p-3"
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', color: '#FFFFFF' }}
       >
-        © 202X - Date Copyright:
-        <a className="text-dark" href="https://mdbootstrap.com/">
-          Rarorza
+        © 2024 - 
+        <a className="text-white" href="https://mdbootstrap.com/" style={{ textDecoration: 'none' }}>
+          ShopIN
         </a>
       </div>
       {/* Copyright */}
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

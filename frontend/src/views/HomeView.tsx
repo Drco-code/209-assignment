@@ -1,11 +1,12 @@
-import { useAuthStore } from '../store/auth'
-import { Link } from 'react-router-dom'
+import { useAuthStore } from '../store/auth';
+import { Link } from 'react-router-dom';
 
 function HomeView() {
   const [isLoggedIn, setIsLoggedIn] = useAuthStore((state) => [
     state.isLoggedIn,
     state.user,
-  ])
+  ]);
+
   return (
     <>
       <div>
@@ -13,8 +14,9 @@ function HomeView() {
           <div className="container">
             <section className="text-center">
               <div className="row">
+                {/* Product Card 1 */}
                 <div className="col-lg-4 col-md-12 mb-4">
-                  <div className="card">
+                  <div className="card" style={{ border: '2px solid #1E90FF', borderRadius: '10px' }}>
                     <div
                       className="bg-image hover-zoom ripple"
                       data-mdb-ripple-color="light"
@@ -22,12 +24,17 @@ function HomeView() {
                       <img
                         src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg"
                         className="w-100"
+                        alt="Product"
+                        style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
                       />
                       <a href="#!">
                         <div className="mask">
                           <div className="d-flex justify-content-start align-items-end h-100">
                             <h5>
-                              <span className="badge badge-primary ms-2">
+                              <span
+                                className="badge ms-2"
+                                style={{ backgroundColor: '#1E90FF', color: '#FFFFFF' }}
+                              >
                                 New
                               </span>
                             </h5>
@@ -45,44 +52,55 @@ function HomeView() {
                     </div>
                     <div className="card-body">
                       <a href="" className="text-reset">
-                        <h5 className="card-title mb-3">Product name</h5>
+                        <h5 className="card-title mb-3" style={{ color: '#1E90FF' }}>Product name</h5>
                       </a>
                       <a href="" className="text-reset">
-                        <p>Category</p>
+                        <p style={{ color: '#555555' }}>Category</p>
                       </a>
-                      <h6 className="mb-3">$61.99</h6>
+                      <h6 className="mb-3" style={{ color: '#1E90FF' }}>$61.99</h6>
                       <div className="btn-group">
                         <button
-                          className="btn btn-primary dropdown-toggle"
+                          className="btn dropdown-toggle"
                           type="button"
                           id="dropdownMenuClickable"
                           data-bs-toggle="dropdown"
                           data-bs-auto-close="false"
                           aria-expanded="false"
+                          style={{ backgroundColor: '#1E90FF', color: '#FFFFFF' }}
                         >
                           Variation
                         </button>
                         <ul
                           className="dropdown-menu"
                           aria-labelledby="dropdownMenuClickable"
+                          style={{ backgroundColor: '#1E90FF', border: '2px solid #000' }}
                         >
                           <div className="d-flex flex-column">
                             <li className="p-1">
-                              <b>Size</b>: XL
+                              <b style={{ color: '#FFFFFF' }}>Size</b>: XL
                             </li>
                             <div className="p-1 mt-0 pt-0 d-flex flex-wrap">
                               <li>
-                                <button className="btn btn-secondary btn-sm me-2 mb-1">
+                                <button
+                                  className="btn btn-sm me-2 mb-1"
+                                  style={{ backgroundColor: '#FFFFFF', color: '#1E90FF' }}
+                                >
                                   XXL
                                 </button>
                               </li>
                               <li>
-                                <button className="btn btn-secondary btn-sm me-2 mb-1">
+                                <button
+                                  className="btn btn-sm me-2 mb-1"
+                                  style={{ backgroundColor: '#FFFFFF', color: '#1E90FF' }}
+                                >
                                   XXL
                                 </button>
                               </li>
                               <li>
-                                <button className="btn btn-secondary btn-sm me-2 mb-1">
+                                <button
+                                  className="btn btn-sm me-2 mb-1"
+                                  style={{ backgroundColor: '#FFFFFF', color: '#1E90FF' }}
+                                >
                                   XXL
                                 </button>
                               </li>
@@ -90,7 +108,7 @@ function HomeView() {
                           </div>
                           <div className="d-flex flex-column mt-3">
                             <li className="p-1">
-                              <b>COlor</b>: Red
+                              <b style={{ color: '#FFFFFF' }}>Color</b>: Red
                             </li>
                             <div className="p-1 mt-0 pt-0 d-flex flex-wrap">
                               <li>
@@ -116,13 +134,15 @@ function HomeView() {
                           <div className="d-flex mt-3 p-1">
                             <button
                               type="button"
-                              className="btn btn-primary me-1 mb-1"
+                              className="btn me-1 mb-1"
+                              style={{ backgroundColor: '#1E90FF', color: '#FFFFFF' }}
                             >
                               <i className="fas fa-shopping-cart" />
                             </button>
                             <button
                               type="button"
-                              className="btn btn-danger px-3 me-1 mb-1 ms-2"
+                              className="btn px-3 me-1 mb-1 ms-2"
+                              style={{ backgroundColor: '#FF6F61', color: '#FFFFFF' }}
                             >
                               <i className="fas fa-heart" />
                             </button>
@@ -130,7 +150,8 @@ function HomeView() {
                         </ul>
                         <button
                           type="button"
-                          className="btn btn-danger px-3 me-1 ms-2"
+                          className="btn px-3 me-1 ms-2"
+                          style={{ backgroundColor: '#FF6F61', color: '#FFFFFF' }}
                         >
                           <i className="fas fa-heart" />
                         </button>
@@ -138,8 +159,10 @@ function HomeView() {
                     </div>
                   </div>
                 </div>
+
+                {/* Product Card 2 */}
                 <div className="col-lg-4 col-md-6 mb-4">
-                  <div className="card">
+                  <div className="card" style={{ border: '2px solid #1E90FF', borderRadius: '10px' }}>
                     <div
                       className="bg-image hover-zoom ripple"
                       data-mdb-ripple-color="light"
@@ -147,12 +170,17 @@ function HomeView() {
                       <img
                         src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(4).jpg"
                         className="w-100"
+                        alt="Product"
+                        style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
                       />
                       <a href="#!">
                         <div className="mask">
                           <div className="d-flex justify-content-start align-items-end h-100">
                             <h5>
-                              <span className="badge badge-success ms-2">
+                              <span
+                                className="badge ms-2"
+                                style={{ backgroundColor: '#1E90FF', color: '#FFFFFF' }}
+                              >
                                 Eco
                               </span>
                             </h5>
@@ -170,29 +198,33 @@ function HomeView() {
                     </div>
                     <div className="card-body">
                       <a href="" className="text-reset">
-                        <h5 className="card-title mb-3">Product name</h5>
+                        <h5 className="card-title mb-3" style={{ color: '#1E90FF' }}>Product name</h5>
                       </a>
                       <a href="" className="text-reset">
-                        <p>Category</p>
+                        <p style={{ color: '#555555' }}>Category</p>
                       </a>
-                      <h6 className="mb-3">$61.99</h6>
+                      <h6 className="mb-3" style={{ color: '#1E90FF' }}>$61.99</h6>
                       <button
                         type="button"
-                        className="btn btn-primary me-1 mb-1"
+                        className="btn me-1 mb-1"
+                        style={{ backgroundColor: '#1E90FF', color: '#FFFFFF' }}
                       >
                         Add to cart
                       </button>
                       <button
                         type="button"
-                        className="btn btn-danger px-3 me-1 mb-1"
+                        className="btn px-3 me-1 mb-1"
+                        style={{ backgroundColor: '#FF6F61', color: '#FFFFFF' }}
                       >
                         <i className="fas fa-times" />
                       </button>
                     </div>
                   </div>
                 </div>
+
+                {/* Product Card 3 */}
                 <div className="col-lg-4 col-md-6 mb-4">
-                  <div className="card">
+                  <div className="card" style={{ border: '2px solid #1E90FF', borderRadius: '10px' }}>
                     <div
                       className="bg-image hover-zoom ripple"
                       data-mdb-ripple-color="light"
@@ -200,12 +232,17 @@ function HomeView() {
                       <img
                         src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).jpg"
                         className="w-100"
+                        alt="Product"
+                        style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
                       />
                       <a href="#!">
                         <div className="mask">
                           <div className="d-flex justify-content-start align-items-end h-100">
                             <h5>
-                              <span className="badge badge-danger ms-2">
+                              <span
+                                className="badge ms-2"
+                                style={{ backgroundColor: '#1E90FF', color: '#FFFFFF' }}
+                              >
                                 -10%
                               </span>
                             </h5>
@@ -223,24 +260,26 @@ function HomeView() {
                     </div>
                     <div className="card-body">
                       <a href="" className="text-reset">
-                        <h5 className="card-title mb-3">Product name</h5>
+                        <h5 className="card-title mb-3" style={{ color: '#1E90FF' }}>Product name</h5>
                       </a>
                       <a href="" className="text-reset">
-                        <p>Category</p>
+                        <p style={{ color: '#555555' }}>Category</p>
                       </a>
                       <h6 className="mb-3">
-                        <s>$61.99</s>
-                        <strong className="ms-2 text-danger">$50.99</strong>
+                        <s style={{ color: '#555555' }}>$61.99</s>
+                        <strong className="ms-2" style={{ color: '#FF6F61' }}>$50.99</strong>
                       </h6>
                       <button
                         type="button"
-                        className="btn btn-primary me-1 mb-1"
+                        className="btn me-1 mb-1"
+                        style={{ backgroundColor: '#1E90FF', color: '#FFFFFF' }}
                       >
                         Add to cart
                       </button>
                       <button
                         type="button"
-                        className="btn btn-danger px-3 me-1 mb-1"
+                        className="btn px-3 me-1 mb-1"
+                        style={{ backgroundColor: '#FF6F61', color: '#FFFFFF' }}
                       >
                         <i className="fas fa-times" />
                       </button>
@@ -248,502 +287,88 @@ function HomeView() {
                   </div>
                 </div>
 
+                {/* Categories Section */}
                 <div className="row">
-                  <div className="col-lg-2">
-                    <img
-                      src="https://darrensaines.no/wp-content/uploads/2020/02/dummy-1.png"
-                      style={{
-                        width: '100px',
-                        height: '100px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                      }}
-                      alt=""
-                    />
-                    <h6>Category</h6>
-                  </div>
-                  <div className="col-lg-2">
-                    <img
-                      src="https://darrensaines.no/wp-content/uploads/2020/02/dummy-1.png"
-                      style={{
-                        width: '100px',
-                        height: '100px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                      }}
-                      alt=""
-                    />
-                    <h6>Category</h6>
-                  </div>
-                  <div className="col-lg-2">
-                    <img
-                      src="https://darrensaines.no/wp-content/uploads/2020/02/dummy-1.png"
-                      style={{
-                        width: '100px',
-                        height: '100px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                      }}
-                      alt=""
-                    />
-                    <h6>Category</h6>
-                  </div>
-                  <div className="col-lg-2">
-                    <img
-                      src="https://darrensaines.no/wp-content/uploads/2020/02/dummy-1.png"
-                      style={{
-                        width: '100px',
-                        height: '100px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                      }}
-                      alt=""
-                    />
-                    <h6>Category</h6>
-                  </div>
-                  <div className="col-lg-2">
-                    <img
-                      src="https://darrensaines.no/wp-content/uploads/2020/02/dummy-1.png"
-                      style={{
-                        width: '100px',
-                        height: '100px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                      }}
-                      alt=""
-                    />
-                    <h6>Category</h6>
-                  </div>
-                  <div className="col-lg-2">
-                    <img
-                      src="https://darrensaines.no/wp-content/uploads/2020/02/dummy-1.png"
-                      style={{
-                        width: '100px',
-                        height: '100px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                      }}
-                      alt=""
-                    />
-                    <h6>Category</h6>
-                  </div>
+                  {[...Array(6)].map((_, index) => (
+                    <div className="col-lg-2" key={index}>
+                      <img
+                        src="https://darrensaines.no/wp-content/uploads/2020/02/dummy-1.png"
+                        style={{
+                          width: '100px',
+                          height: '100px',
+                          borderRadius: '50%',
+                          objectFit: 'cover',
+                          border: '2px solid #1E90FF',
+                        }}
+                        alt="Category"
+                      />
+                      <h6 style={{ color: '#1E90FF' }}>Category</h6>
+                    </div>
+                  ))}
                 </div>
               </div>
             </section>
-            {/*Section: Wishlist*/}
-          </div>
-        </main>
-        {/*Main layout*/}
-        <main>
-          <section className="text-center container">
-            <div className="row py-lg-5">
-              <div className="col-lg-6 col-md-8 mx-auto">
-                <h1 className="fw-light">Trending Products</h1>
-                <p className="lead text-muted">
-                  Something short and leading about the collection below—its
-                  contents
-                </p>
+
+            {/* Trending Products Section */}
+            <section className="text-center container">
+              <div className="row py-lg-5">
+                <div className="col-lg-6 col-md-8 mx-auto">
+                  <h1 className="fw-light" style={{ color: '#1E90FF' }}>Trending Products</h1>
+                  <p className="lead text-muted">
+                    Something short and leading about the collection below—its contents
+                  </p>
+                </div>
               </div>
-            </div>
-          </section>
-          <div className="album py-5 bg-light">
-            <div className="container">
-              <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
+            </section>
+            <div className="album py-5 bg-light">
+              <div className="container">
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                  {[...Array(9)].map((_, index) => (
+                    <div className="col" key={index}>
+                      <div className="card shadow-sm" style={{ border: '2px solid #1E90FF', borderRadius: '10px' }}>
+                        <svg
+                          className="bd-placeholder-img card-img-top"
+                          width="100%"
+                          height={225}
+                          xmlns="http://www.w3.org/2000/svg"
+                          role="img"
+                          aria-label="Placeholder: Thumbnail"
+                          preserveAspectRatio="xMidYMid slice"
+                          focusable="false"
+                        >
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#1E90FF" />
+                          <text x="50%" y="50%" fill="#FFFFFF" dy=".3em">
+                            Thumbnail
+                          </text>
+                        </svg>
+                        <div className="card-body">
+                          <p className="card-text" style={{ color: '#555555' }}>
+                            This is a wider card with supporting text below as a natural lead-in to additional content.
+                          </p>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div className="btn-group">
+                              <button
+                                type="button"
+                                className="btn btn-sm btn-outline-secondary"
+                                style={{ borderColor: '#1E90FF', color: '#1E90FF' }}
+                              >
+                                View
+                              </button>
+                              <button
+                                type="button"
+                                className="btn btn-sm btn-outline-secondary"
+                                style={{ borderColor: '#1E90FF', color: '#1E90FF' }}
+                              >
+                                Edit
+                              </button>
+                            </div>
+                            <small className="text-muted">9 mins</small>
+                          </div>
                         </div>
-                        <small className="text-muted">9 mins</small>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <svg
-                      className="bd-placeholder-img card-img-top"
-                      width="100%"
-                      height={225}
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                        Thumbnail
-                      </text>
-                    </svg>
-                    <div className="card-body">
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-sm btn-outline-secondary"
-                          >
-                            Edit
-                          </button>
-                        </div>
-                        <small className="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -751,7 +376,7 @@ function HomeView() {
         </main>
       </div>
     </>
-  )
+  );
 }
 
-export default HomeView
+export default HomeView;
