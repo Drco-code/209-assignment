@@ -96,3 +96,13 @@ We have chosen a **monopolistic/competitive market** for our e-commerce platform
       $npm install
 
       $npm run dev
+
+
+4. Accessing Admin Site
+   ```bash
+
+   $ cd backend
+
+   $ py manage.py runserver
+
+   $ http://127.0.0.1:8000/admin
