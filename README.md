@@ -1,6 +1,7 @@
+
 # E-Commerce Website
 
-![Group Picture](group_picture.jpg)  
+![Group Picture](https://github.com/user-attachments/assets/9cedb14a-5b02-4433-b955-3605af10d903)(group_picture.jpg)  
 *Insert a group picture of all team members here.*
 
 ---
